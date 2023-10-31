@@ -31,7 +31,7 @@ Meteor.publish(Stuffs.adminPublicationName, function () {
 });
 
 Meteor.publish(Contacts.adminPublicationName, function () {
-  if (this.userId && Roles.userIsInRole(this.userId, 'admin')){
+  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
     return Contacts.collection.find();
   }
   return this.ready();
