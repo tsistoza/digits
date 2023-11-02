@@ -47,11 +47,15 @@ const AddContacts = () => {
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => submit(data, fRef)}>
             <Card>
               <Card.Body>
-                <TextField name="firstName" />
-                <TextField name="lastName" />
-                <TextField name="address" />
-                <TextField name="image" />
-                <TextField name="description" />
+                <Row>
+                  <Col><TextField name="firstName" /></Col>
+                  <Col><TextField name="lastName" /></Col>
+                </Row>
+                <Row>
+                  <Col><TextField name="address" /></Col>
+                  <Col><TextField name="image" /></Col>
+                </Row>
+                <Row><TextField name="description" /></Row>
                 <SubmitField />
               </Card.Body>
             </Card>
