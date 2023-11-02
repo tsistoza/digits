@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Col, Image } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Contact = ({ contacts }) => {
   const person = contacts.map((contact, index) => (
@@ -18,6 +19,9 @@ const Contact = ({ contacts }) => {
             {contact.description}
           </Card.Text>
         </Card.Body>
+        <Card.Footer>
+          <Link to={`/edit/${contact._id}`}>Edit</Link>
+        </Card.Footer>
       </Card>
     </Col>
   ));
@@ -25,7 +29,13 @@ const Contact = ({ contacts }) => {
 };
 
 Contact.propTypes = {
-  contacts: PropTypes.Array,
+  contacts: PropTypes.shape({
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+    address: PropTypes.string,
+    image: PropTypes.string,
+    description: PropTypes.string,
+  }),
 };
 
 export default Contact;
