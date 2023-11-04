@@ -18,7 +18,7 @@ const ListContacts = () => {
     const note = Notes.collection.find({}).fetch();
     // Determine if the subscription is ready
     let rdy = subscription.ready();
-    rdy = subscription2.ready();
+    rdy = rdy === true ? subscription2.ready() : false;
     // Get the Stuff documents
     return {
       contacts: contact,
