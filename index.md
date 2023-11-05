@@ -1,5 +1,7 @@
 ![](https://github.com/ics-software-engineering/meteor-application-template-react/raw/main/doc/landing-page.png)
 
+
+<img src="doc/landing-page.png">
 meteor-application-template-react is a sample Meteor 2.9 application that illustrates: 
 
   * A standard directory layout using 'imports/' as recommended in the [Meteor Guide](https://guide.meteor.com/structure.html)
